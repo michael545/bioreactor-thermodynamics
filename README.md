@@ -16,6 +16,35 @@ The main control objectives are:
 
 The system is described by a set of differential equations that model the heat transfer between the jacket, the reactor core, and the environment. The mathematical model is provided in the `navodila.pdf` document (in Slovenian).
 
+---
+
+## Governing Equations
+
+The temperature dynamics of the batch bioreactor are governed by the following partial differential equations (PDEs):
+
+<div align="center">
+
+$\boxed{\begin{aligned}
+C_R \frac{\partial T}{\partial t} &= Q_{in} (T_{in} - T) + k_A (T_{Pizh} - T) + Q_{r}\ 
+C_J \frac{\partial T_{Pizh}}{\partial t} &= F (T_{in, J} - T_{Pizh}) - k_A (T_{Pizh} - T)
+\end{aligned}}$
+
+</div>
+
+Where:
+- $T$ = Reactor core temperature (°C)
+- $T_{Pizh}$ = Jacket (heat exchanger) temperature (°C)
+- $C_R$ = Heat capacity of reactor contents (J/K)
+- $C_J$ = Heat capacity of jacket (J/K)
+- $Q_{in}$ = Inlet flow rate to reactor (kg/s)
+- $T_{in}$ = Inlet temperature to reactor (°C)
+- $k_A$ = Overall heat transfer coefficient × area (W/K)
+- $Q_{r}$ = Heat generated/consumed by reaction (W)
+- $F$ = Jacket flow rate (kg/s)
+- $T_{in, J}$ = Inlet temperature to jacket (°C)
+
+---
+
 ## Control Strategy
 
 A cascade control architecture is employed to meet the control objectives. This strategy consists of two nested control loops:
