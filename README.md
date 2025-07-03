@@ -20,20 +20,22 @@ The system is described by a set of differential equations that model the heat t
 
 ## Governing Equations
 
-The temperature dynamics of the batch bioreactor are governed by the following partial differential equations (PDEs):
+The temperature dynamics of the batch bioreactor are governed by the following system of ordinary differential equations:
 
 <div align="center">
 
-$\boxed{\begin{aligned}
-C_R \frac{\partial T}{\partial t} &= Q_{in} (T_{in} - T) + k_A (T_{Pizh} - T) + Q_{r}\ 
-C_J \frac{\partial T_{Pizh}}{\partial t} &= F (T_{in, J} - T_{Pizh}) - k_A (T_{Pizh} - T)
-\end{aligned}}$
+$$
+\begin{aligned}
+C_R \frac{dT}{dt} &= Q_{in} (T_{in} - T) + k_A (T_{\text{jacket}} - T) + Q_{r} \\
+C_J \frac{dT_{\text{jacket}}}{dt} &= F (T_{in, J} - T_{\text{jacket}}) - k_A (T_{\text{jacket}} - T)
+\end{aligned}
+$$
 
 </div>
 
 Where:
 - $T$ = Reactor core temperature (°C)
-- $T_{Pizh}$ = Jacket (heat exchanger) temperature (°C)
+- $T_{\text{jacket}}$ = Jacket (heat exchanger) temperature (°C)
 - $C_R$ = Heat capacity of reactor contents (J/K)
 - $C_J$ = Heat capacity of jacket (J/K)
 - $Q_{in}$ = Inlet flow rate to reactor (kg/s)
