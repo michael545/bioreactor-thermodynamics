@@ -14,7 +14,7 @@ The main control objectives are:
 
 ## System Dynamics
 
-The system is described by a set of differential equations that model the heat transfer between the jacket, the reactor core, and the environment. The mathematical model is provided in the `navodila.pdf` document (in Slovenian).
+The system is described by a set of differential equations (ODEs) that model the heat transfer between the jacket, the reactor core, and the environment. The mathematical model is provided in the `navodila.pdf` document (in Slovenian).
 
 ---
 
