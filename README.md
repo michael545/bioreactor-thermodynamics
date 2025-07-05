@@ -22,7 +22,6 @@ The system is described by a set of differential equations (ODEs) that model the
 
 The temperature dynamics of the batch bioreactor are governed by the following system of ordinary differential equations:
 
-<div align="center">
 
 $$
 \begin{aligned}
@@ -31,7 +30,7 @@ C_J \frac{dT_{\text{jacket}}}{dt} &= F (T_{in, J} - T_{\text{jacket}}) - k_A (T_
 \end{aligned}
 $$
 
-</div>
+
 
 Where:
 - $T$ = Reactor core temperature (°C)
